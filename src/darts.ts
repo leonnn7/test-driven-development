@@ -1,9 +1,9 @@
-export function calcPoints(hits: string): number {
-  console.log(hits);
-  throw new Error("not implemented yet");
-}
+export function possibleCheckout(score: number): string | null {
+  const remaining = 501 - score;
+  if (remaining <= 0 || remaining % 2 !== 0) return null;
 
-export function possibleCheckout(x: number): string {
-  console.log(x);
-  throw new Error("not implemented yet");
+  const double = remaining / 2;
+  if (double > 20) return null;
+
+  return `Double ${double}`;
 }
